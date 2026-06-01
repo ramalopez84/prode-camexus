@@ -524,7 +524,7 @@ export default function App(){
 
   // En desktop, scroll abajo cuando termina de cargar (loading=false)
   useEffect(()=>{
-    if(sc==="splash" && !loading && window.innerWidth > 600){
+    if(sc==="splash" && !loading){
       setTimeout(()=>{
         const root = document.getElementById("root");
         if(root) root.scrollTop = root.scrollHeight;
