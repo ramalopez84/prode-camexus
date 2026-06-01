@@ -626,11 +626,11 @@ export default function App(){
 
   if(sc==="splash")return(
     <div style={{...W,alignItems:"stretch",flexDirection:"column",padding:0,margin:0}}>
-      <div style={{position:"relative",overflow:"hidden",width:"100%",flexShrink:0,margin:0,padding:0,lineHeight:0,minHeight:"55vw",maxHeight:"72vh"}}>
-        <img src={`data:image/jpeg;base64,${PROMO_B64}`} alt="" style={{width:"100%",objectFit:"cover",objectPosition:"center 75%",display:"block",maxHeight:"70vh",verticalAlign:"top"}}/>
-        <div style={{position:"absolute",inset:0,background:"linear-gradient(to bottom,rgba(6,9,26,0.15) 0%,rgba(6,9,26,0) 30%,rgba(6,9,26,0) 55%,rgba(6,9,26,0.85) 80%,rgba(6,9,26,1) 100%)"}}/>
+      <div style={{position:"relative",width:"100%",flexShrink:0,margin:0,padding:0,lineHeight:0}}>
+        <img src={`data:image/jpeg;base64,${PROMO_B64}`} alt="" style={{width:"100%",display:"block",verticalAlign:"top"}}/>
+        <div style={{position:"absolute",inset:0,background:"linear-gradient(to bottom,rgba(6,9,26,0.05) 0%,rgba(6,9,26,0) 20%,rgba(6,9,26,0) 65%,rgba(6,9,26,0.9) 85%,rgba(6,9,26,1) 100%)"}}/>
       </div>
-      <div style={{display:"flex",flexDirection:"column",alignItems:"center",padding:"0 20px",zIndex:2,width:"100%",maxWidth:420,margin:"-60px auto 0",boxSizing:"border-box",paddingTop:"env(safe-area-inset-top,0px)"}}>
+      <div style={{display:"flex",flexDirection:"column",alignItems:"center",padding:"0 20px",zIndex:2,width:"100%",maxWidth:420,margin:"-80px auto 0",boxSizing:"border-box",paddingTop:"env(safe-area-inset-top,0px)"}}>
         <img src={`data:image/webp;base64,${LOGO_B64}`} alt="CaMexUS Prode 2026"
           style={{width:"min(280px,75vw)",filter:"drop-shadow(0 2px 12px rgba(0,0,0,0.5))"}}/>
         <p style={{color:"#9ca3af",fontSize:11,margin:"6px 0 1px",textAlign:"center"}}>🇺🇸 🇲🇽 🇨🇦 · 11 Jun – 19 Jul 2026</p>
