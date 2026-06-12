@@ -678,14 +678,15 @@ export default function App(){
   );
 
   if(sc==="splash")return(
-    <div style={{...W,alignItems:"stretch",flexDirection:"column",padding:0,margin:0}}>
-      <div style={{position:"relative",overflow:"hidden",width:"100%",flexShrink:0,margin:0,padding:0,lineHeight:0}}>
-        <img src={`data:image/jpeg;base64,${PROMO_B64}`} alt="" style={{width:"100%",objectFit:"cover",objectPosition:"center top",display:"block",maxHeight:"60vh",verticalAlign:"top"}}/>
-        <div style={{position:"absolute",inset:0,background:"linear-gradient(to bottom,rgba(6,9,26,0) 35%,rgba(6,9,26,1) 100%)"}}/>
+    <div style={{...W,alignItems:"stretch",flexDirection:"column",padding:0,margin:0,overflowY:"auto"}}>
+      <div style={{position:"relative",width:"100%",flexShrink:0,margin:0,padding:0,lineHeight:0}}>
+        <img src={`data:image/jpeg;base64,${PROMO_B64}`} alt="" className="splash-bg-desktop" style={{width:"100%",display:"block",verticalAlign:"top"}}/>
+        <img src={`data:image/jpeg;base64,${PROMO_MOBILE_B64}`} alt="" className="splash-bg-mobile" style={{width:"100%",display:"none",verticalAlign:"top"}}/>
+        <div style={{position:"absolute",inset:0,background:"linear-gradient(to bottom,rgba(6,9,26,0.15) 0%,rgba(6,9,26,0) 10%,rgba(6,9,26,0) 60%,rgba(6,9,26,0.7) 80%,rgba(6,9,26,1) 95%)"}}/>
       </div>
-      <div style={{display:"flex",flexDirection:"column",alignItems:"center",padding:"0 20px",zIndex:2,width:"100%",maxWidth:420,margin:"-70px auto 0",boxSizing:"border-box",paddingTop:"env(safe-area-inset-top,0px)"}}>
+      <div style={{display:"flex",flexDirection:"column",alignItems:"center",padding:"0 20px",zIndex:2,width:"100%",maxWidth:420,margin:"var(--logo-margin,-40px) auto 0",boxSizing:"border-box",paddingTop:"env(safe-area-inset-top,0px)"}}>
         <img src={`data:image/webp;base64,${LOGO_B64}`} alt="CaMexUS Prode 2026"
-          style={{width:"min(260px,72vw)",filter:"drop-shadow(0 3px 18px rgba(0,0,0,0.75))"}}/>
+          style={{width:"min(280px,75vw)",filter:"drop-shadow(0 2px 12px rgba(0,0,0,0.5))"}}/>
         <p style={{color:"#9ca3af",fontSize:11,margin:"6px 0 1px",textAlign:"center"}}>🇺🇸 🇲🇽 🇨🇦 · 11 Jun – 19 Jul 2026</p>
         <p style={{color:"#6b7280",fontSize:10,margin:"0 0 12px",textAlign:"center"}}>48 equipos · 104 partidos · Base compartida 🌐</p>
         {loading?<p style={{color:"#6b7280"}}>Cargando…</p>:(
